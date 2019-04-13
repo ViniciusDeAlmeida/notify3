@@ -42,7 +42,11 @@ footer{
 }
 
 section{
-    background-color: darkslategrey;
+    Grid-area: section;
+    background-color: red;
+    
+
+
 }
 
 
