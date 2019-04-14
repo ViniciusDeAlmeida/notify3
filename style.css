@@ -21,6 +21,8 @@
 
 article{
     background-color: blue;
+    display: flex;
+    grid-area: article;
 }
 
 footer{
@@ -37,21 +39,15 @@ nav{
 
 }
 
-section{
-    background-color: white;
-    width: 1250px;
-    display: flex;
-    justify-content: space-around;
-    border: 50cm;
-}
-
-
-
 body{
     display: grid;
-    grid-template-areas: 'header' 'section' 'navbar' 'article' 'footer';
-    grid-template-rows: 38vw 30vw 15vw 15vw 15vw 15vw;
-    grid-template-columns: 100vw;
+    grid-template-areas: 'header header header' 
+                         'section section section' 
+                         'navbar navbar navbar' 
+                         'article article article' 
+                         'footer footer footer';
+    grid-template-rows: 38vw 30vw 15vw 15vw 15vw;
+    grid-template-columns: 100vw ;
     justify-content: center;
 }
 
@@ -61,22 +57,40 @@ header{
     background-size: cover;
 }
 
-#engrenagem {
-
-    width: 100px;
-    height: 100px;
-    display:flex;
-    align-items: center;
+section{
+    grid-area: section;
+    background-color: white;
+    display: flex;
+    
+    grid-template-rows: 30vw 30vw 30vw;
+    grid-template-columns: 30vw 30vw 30vw;
     justify-content: center;
-    border-radius: 100%;
-    border: 2px solid rgb(130, 233, 130);
-    background-color:rgb(130, 233, 130);
-    text-align: center; line-height: 50%;
+    align-items: center;
+    flex-direction: column;
 }
 
-    
+#engrenagem {
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}   
+
+.engre{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 2px solid rgb(130, 233, 130);
+    background-color:rgb(130, 233, 130);
+    text-align: end ; line-height: 30%;
+}  
+
 #estrela {
-   
+    flex-direction: column;
+}  
+.estre { 
     width: 100px;
     height: 100px;
     display:flex;
@@ -85,12 +99,13 @@ header{
     border-radius: 100%;
     border: 2px solid rgb(130, 233, 130);
     background-color:rgb(130, 233, 130);
-    text-align: center; line-height: 30%;
-   
-
+    text-align: end; line-height: 30%;
 }
 
 #globo{
+    flex-direction: column;
+}
+.glob{
     width: 100px;
     height: 100px;
     display:flex;
@@ -99,23 +114,51 @@ header{
     border-radius: 100%;
     border: 2px solid rgb(130, 233, 130);
     background-color:rgb(130, 233, 130);
-    text-align: center; line-height: 50%;
+    text-align: end; line-height: 50%;
     
 }
 
 
 #espacoIcone{
-    width: 1250px;
+    width: 1400px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+   align-items: baseline;
+
+    
 }
 
+
+ 
+
+#tudosection{
+    height: 30px;
+
+    width: 50px;
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex ;
+    align-items: center ;
+}
+#TEMA{
+    
+
+    width: 100x;
+    height: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: flex ; line-height: 50%;
+}
 #tema1{
     text-align: center;
+    height: 500px;
     width: 1250px;
     display: flex;
     justify-content: space-around;
+    text-align: center;
 }
 
 #tema2{
@@ -131,18 +174,33 @@ header{
     display: flex;
     justify-content: space-around;
 }
-
-
-#tudosection{
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-
-}
-#TEMA{
+#temaTexto{
     width: 1300px;
-    height: 100px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-block-end: 20%;
+}
+#texto1{
+    text-align: center;
+    height: 500px;
+    width: 1250px;
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    text-align: center;
+}
+
+#texto2{
+    text-align: center;
+    width: 1250px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#texto3{
+    text-align: center;
+    width: 1250px;
+    display: flex;
+    justify-content: space-around;
 }
